@@ -52,5 +52,36 @@ namespace LatestBlazorCalculator.Calculator
 
 			throw new Exception("Not implemented operator");
 		}
+	
+		public static string FriendlyName(this Operator @operator)
+		{
+			switch (@operator)
+			{
+				case Operator.ADD:
+					return "+";
+				case Operator.COS:
+					return "cos";
+				case Operator.DIVIDE:
+					return "/";
+				case Operator.LN:
+					return "ln";
+				case Operator.LOG:
+					return "log";
+				case Operator.MULTIPLY:
+					return "*";
+				case Operator.SIN:
+					return "sin";
+				case Operator.SQRT:
+					return "sqrt";
+				case Operator.SQUARE:
+					return "square";
+				case Operator.SUBTRACT:
+					return "-";
+				case Operator.TAN:
+					return "tan";
+			}
+
+			throw new Exception("Not implemented operator");
+		}
 	}
 }
