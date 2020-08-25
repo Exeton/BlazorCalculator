@@ -2,32 +2,7 @@
 
 
 <div>
-    <br />
-    <div style="border-color:black; border-width: 2px">
-        <p id="value-window" style="background-color:lightgray; font-size:20px">@calculator.Calculation</p>
-        <div id="button-section" style="background-color:darkgray">
 
-            @for (int i = 0; i < 10; i++)
-            {
-                var local_i = i;
-                <button @onclick="(() => OnNumberInput(local_i))">@local_i.ToString()</button>
-
-                if (i % 3 == 0)
-                {
-                    <br />
-                }
-
-            }
-
-            <br />
-            @foreach (Operator op in Enum.GetValues(typeof(Operator)))
-            {
-                var local_op = op;
-                <button @onclick="(() => OnOperatorInput(local_op))">@local_op.FriendlyName()</button>
-            }
-
-        </div>
-    </div>
 </div>
 
 
@@ -44,21 +19,4 @@
     {
         calculator.OnNumberInput(number);
     }
-
-    /*
-
-            ADD,
-        SUBTRACT,
-        MULTIPLY,
-        DIVIDE,
-        SIN,
-        COS,
-        TAN,
-        SQRT,
-        SQUARE,
-        LOG,
-        LN
-
-    */
-
 }
